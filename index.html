@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> The New Ruler Sample </title>
+    <style>
+        body {
+            font-family: 'Garamond', serif;
+            background: linear-gradient(to right, #ffecd2, #fcb69f);
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .title {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: darkred;
+            text-align: center;
+            margin-top: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        #showContentButton {
+            font-size: 1.2em;
+            padding: 10px 20px;
+            color: white;
+            background: darkred;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+        }
+        #showContentButton:hover {
+            background: darkorange;
+            transform: scale(1.05);
+        }
+        .content {
+            margin-top: 30px;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: none; /* Initially hidden */
+            transition: opacity 0.5s ease-in-out;
+        }
+        .heading {
+            font-size: 1.5em;
+            text-align: center;
+            margin-bottom: 20px;
+            color: darkred;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+        .content p {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="title">The New Ruler Sample
+  </div>
+    
+    <button id="showContentButton">Show Novel</button>
+    
+    <div class="content" id="novelContent">
+        <div class="heading">Chapter 1</div>
+        <p>(Two gods are fighting with each other. There are two huge forces of angels and demons. The fight of the gods is so intense that the angels and demons could only see the glowing lights and smoke. It is looking so dramatic.) Suddenly, Tsukasa wakes up and realizes it was just a dream. It was 5 o'clock in the morning. He goes to the washroom and splashes water on his face and when he comes back, he takes a sip of water and starts wondering why he had this dream and if he had some kind of relation with that dream. When he starts thinking about his dream he could not go on thinking about it as it was so irritating for him.</p>
+        <!-- More novel content here -->
+    </div>
+
+    <script>
+        document.getElementById('showContentButton').addEventListener('click', function() {
+            document.getElementById('novelContent').style.display = 'block';
+            this.style.display = 'none'; // Hide the button after clicking
+        });
+    </script>
+
+</body>
+</html>
